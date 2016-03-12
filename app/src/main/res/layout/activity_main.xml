@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.jon.draw_30.MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存" />
+
+        <Button
+            android:id="@+id/openButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/saveButton"
+            android:text="打开" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            android:layout_toRightOf="@id/openButton"
+            android:text="清除"/>
+
+
+
+        <RadioGroup
+            android:id="@+id/graphGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/saveButton"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rectButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长方形" />
+
+
+            <RadioButton
+                android:id="@+id/circleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="圆" />
+
+            <RadioButton
+                android:id="@+id/ovalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="椭圆" />
+
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/moveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/graphGroup"
+            android:text="移动" />
+
+        <CheckBox
+            android:id="@+id/changeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/graphGroup"
+            android:layout_toRightOf="@id/moveButton"
+            android:text="改动" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/drawLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/graphGroup"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>
